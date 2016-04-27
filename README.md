@@ -9,9 +9,9 @@ The basic characteristics are that it works currently only on the front camera. 
 
 ```
 self.customCamera = [[SACustomCamera alloc] initWithCameraContainerView:self.containerView
-                                                            frameForCapture:self.frameForCapture];
-    self.customCamera.delegate = self;
-    [self.customCamera buildCustomCamera];
+                                                        frameForCapture:self.frameForCapture];
+self.customCamera.delegate = self;
+[self.customCamera buildCustomCamera];
 ```
 
 #####Implement the custom camera delegated method:
