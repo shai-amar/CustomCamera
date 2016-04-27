@@ -5,7 +5,7 @@ The basic characteristics are that it works currently only on the front camera. 
 
 ## Setup
 
-####Add the following to the **viewDidLoad** method:
+#####Add the following to the **viewDidLoad** method:
 
 ```
 self.customCamera = [[SACustomCamera alloc] initWithCameraContainerView:self.containerView
@@ -14,7 +14,7 @@ self.customCamera = [[SACustomCamera alloc] initWithCameraContainerView:self.con
     [self.customCamera buildCustomCamera];
 ```
 
-####Implement the custom camera delegated method:
+#####Implement the custom camera delegated method:
 ```
 - (void)handleCameraPhotoWithImage:(UIImage *)image
 {
