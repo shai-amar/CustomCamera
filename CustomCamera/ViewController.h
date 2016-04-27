@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SACustomCamera.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<SACustomCameraDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *frameForCapture;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(id)sender;

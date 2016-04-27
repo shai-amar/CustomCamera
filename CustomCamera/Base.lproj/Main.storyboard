@@ -14,29 +14,73 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s93-Bf-TSH">
-                                <rect key="frame" x="85" y="67" width="150" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3fJ-4Z-OLN">
+                                <rect key="frame" x="190" y="70" width="220" height="460"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-7r-LDR">
+                                        <rect key="frame" x="67" y="425" width="86" height="30"/>
+                                        <state key="normal" title="take a photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McC-XX-fG4"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s93-Bf-TSH">
+                                        <rect key="frame" x="35" y="10" width="150" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmx-P3-dC1">
+                                        <rect key="frame" x="35" y="218" width="150" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="XhK-yv-NBE"/>
+                                    <constraint firstAttribute="width" constant="220" id="yDS-fp-Y7a"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XhK-yv-NBE"/>
+                                        <exclude reference="yDS-fp-Y7a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="28" width="220" height="460"/>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="90" y="64" width="220" height="460"/>
+                                    <mask key="constraints">
+                                        <include reference="XhK-yv-NBE"/>
+                                        <include reference="yDS-fp-Y7a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="70" width="220" height="460"/>
+                                </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xmx-P3-dC1">
-                                <rect key="frame" x="85" y="283" width="150" height="200"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-7r-LDR">
-                                <rect key="frame" x="117" y="497" width="86" height="30"/>
-                                <state key="normal" title="take a photo"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McC-XX-fG4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3fJ-4Z-OLN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="abZ-sV-UNV"/>
+                            <constraint firstItem="3fJ-4Z-OLN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ue2-WD-z0w"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="abZ-sV-UNV"/>
+                                <exclude reference="ue2-WD-z0w"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="abZ-sV-UNV"/>
+                                <include reference="ue2-WD-z0w"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="containerView" destination="3fJ-4Z-OLN" id="XAH-wF-49s"/>
                         <outlet property="frameForCapture" destination="s93-Bf-TSH" id="jSE-9z-Edw"/>
                         <outlet property="imageView" destination="Xmx-P3-dC1" id="OAJ-FZ-nRH"/>
                     </connections>

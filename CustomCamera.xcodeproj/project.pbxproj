@@ -15,6 +15,8 @@
 		6613B7141CCF6747005B8D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6613B7121CCF6747005B8D80 /* LaunchScreen.storyboard */; };
 		6613B71F1CCF6747005B8D80 /* CustomCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6613B71E1CCF6747005B8D80 /* CustomCameraTests.m */; };
 		6613B72A1CCF6BCF005B8D80 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6613B7291CCF6BCF005B8D80 /* AVFoundation.framework */; };
+		6613B72D1CD0A543005B8D80 /* SACustomCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 6613B72C1CD0A543005B8D80 /* SACustomCamera.m */; };
+		6613B7301CD0B1E4005B8D80 /* SACustomCameraException.m in Sources */ = {isa = PBXBuildFile; fileRef = 6613B72F1CD0B1E4005B8D80 /* SACustomCameraException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		6613B71E1CCF6747005B8D80 /* CustomCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCameraTests.m; sourceTree = "<group>"; };
 		6613B7201CCF6747005B8D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6613B7291CCF6BCF005B8D80 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6613B72B1CD0A543005B8D80 /* SACustomCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACustomCamera.h; sourceTree = "<group>"; };
+		6613B72C1CD0A543005B8D80 /* SACustomCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACustomCamera.m; sourceTree = "<group>"; };
+		6613B72E1CD0B1E4005B8D80 /* SACustomCameraException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACustomCameraException.h; sourceTree = "<group>"; };
+		6613B72F1CD0B1E4005B8D80 /* SACustomCameraException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACustomCameraException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,14 +91,10 @@
 		6613B7031CCF6747005B8D80 /* CustomCamera */ = {
 			isa = PBXGroup;
 			children = (
-				6613B7071CCF6747005B8D80 /* AppDelegate.h */,
-				6613B7081CCF6747005B8D80 /* AppDelegate.m */,
+				6613B7311CD0B50E005B8D80 /* API */,
 				6613B70A1CCF6747005B8D80 /* ViewController.h */,
 				6613B70B1CCF6747005B8D80 /* ViewController.m */,
 				6613B70D1CCF6747005B8D80 /* Main.storyboard */,
-				6613B7101CCF6747005B8D80 /* Assets.xcassets */,
-				6613B7121CCF6747005B8D80 /* LaunchScreen.storyboard */,
-				6613B7151CCF6747005B8D80 /* Info.plist */,
 				6613B7041CCF6747005B8D80 /* Supporting Files */,
 			);
 			path = CustomCamera;
@@ -101,6 +103,11 @@
 		6613B7041CCF6747005B8D80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6613B7071CCF6747005B8D80 /* AppDelegate.h */,
+				6613B7081CCF6747005B8D80 /* AppDelegate.m */,
+				6613B7101CCF6747005B8D80 /* Assets.xcassets */,
+				6613B7121CCF6747005B8D80 /* LaunchScreen.storyboard */,
+				6613B7151CCF6747005B8D80 /* Info.plist */,
 				6613B7051CCF6747005B8D80 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -113,6 +120,17 @@
 				6613B7201CCF6747005B8D80 /* Info.plist */,
 			);
 			path = CustomCameraTests;
+			sourceTree = "<group>";
+		};
+		6613B7311CD0B50E005B8D80 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6613B72B1CD0A543005B8D80 /* SACustomCamera.h */,
+				6613B72C1CD0A543005B8D80 /* SACustomCamera.m */,
+				6613B72E1CD0B1E4005B8D80 /* SACustomCameraException.h */,
+				6613B72F1CD0B1E4005B8D80 /* SACustomCameraException.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6613B70C1CCF6747005B8D80 /* ViewController.m in Sources */,
+				6613B7301CD0B1E4005B8D80 /* SACustomCameraException.m in Sources */,
 				6613B7091CCF6747005B8D80 /* AppDelegate.m in Sources */,
 				6613B7061CCF6747005B8D80 /* main.m in Sources */,
+				6613B72D1CD0A543005B8D80 /* SACustomCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
